@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción IMDB Rating</title>
+</head>
+<body>
+
+    <h1>Predicción de IMDB Rating</h1>
+
+    <form method="POST">
+        <input type="number" step="any" name="duracion" placeholder="Duración (min)" required>
+        <input type="number" step="any" name="votos" placeholder="Número de votos" required>
+        <input type="number" step="any" name="puntuacion_meta" placeholder="Meta score" required>
+        
+        <button type="submit">Predecir</button>
+    </form>
+
+    {% if prediccion %}
+        <h2>Resultado: {{ prediccion }}</h2>
+    {% endif %}
+
+</body>
+</html>
